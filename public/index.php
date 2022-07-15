@@ -53,5 +53,5 @@
     $router->post('/api/pacientes/eliminar',[PacienteController::class,'eliminarPacientes']);
 
     $router->comprobarRutas();
-
+    echo 'conectado correctamente';
 ?>
