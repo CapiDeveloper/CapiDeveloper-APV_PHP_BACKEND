@@ -12,4 +12,5 @@
     //Conexcion a bd
     use Model\ActiveRecord;
     ActiveRecord::conectarDB($bd);
+    
 ?>

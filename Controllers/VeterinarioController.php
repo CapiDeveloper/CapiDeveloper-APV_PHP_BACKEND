@@ -91,11 +91,14 @@ class VeterinarioController{
               $secret = 'Hello&MikeFooBar123';
               
               $token = Token::customPayload($data, $secret);
-
+              unset($existeUsuario->password);
+              unset($existeUsuario->token);
+              unset($existeUsuario->confirmado);
                 $array = [
-                  'mensaje'=>$token,
+                  'mensaje'=>$existeUsuario,
                   'error'=>false,
-                  'valido'=>true
+                  'valido'=>true,
+                  'token'=>$token
                 ];
                 
 

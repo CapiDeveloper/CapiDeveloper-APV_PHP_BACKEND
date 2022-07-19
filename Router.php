@@ -7,8 +7,10 @@ class Router{
     public function comprobarRutas(){
         
 
-        // $urlActual = $_SERVER['PATH_INFO'] ?? '/'; (utiliza servidor integrado en php)
-        $urlActual = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
+        $urlActual = $_SERVER['PATH_INFO'] ?? '/'; 
+        // $urlActual = $_SERVER['http://localhost/veterinaria'] ?? '/'; 
+
+        // $urlActual = $_SERVER['REQUEST_URI'] === '' ? '/' : $_SERVER['REQUEST_URI'];
         $metodoActual = $_SERVER['REQUEST_METHOD'];
 
         if ($metodoActual === 'GET') {
